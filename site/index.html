@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR" data-tema="escuro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nelson Félix · Sites e automações</title>
+<meta name="description" content="Nelson Félix cria sites, sistemas e automações de WhatsApp para agências e projetos próprios. Veja projetos reais e fale comigo.">
+<meta property="og:title" content="Nelson Félix · Sites e automações">
+<meta property="og:description" content="Sites, sistemas e automações de WhatsApp. Veja projetos reais.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+<script>
+  /* aplica o tema antes de pintar a página, para não piscar */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('tema'); } catch (e) {}
+    if (t !== 'claro' && t !== 'escuro') {
+      t = matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
+    }
+    document.documentElement.dataset.tema = t;
+  })();
+</script>
+</head>
+<body>
+<a class="pular" href="#projetos">Pular para os projetos</a>
+
+<header class="topo">
+  <div class="miolo topo-grade">
+    <a class="marca" href="#hero">Nelson Félix</a>
+    <span class="selo esconde-m"><span class="ponto" aria-hidden="true"></span>Disponível para projetos</span>
+    <nav class="links" aria-label="Seções">
+      <a class="esconde-m" href="#projetos">Projetos</a>
+      <a class="esconde-m" href="#servicos">Serviços</a>
+      <a class="esconde-m" href="#sobre">Sobre</a>
+      <button class="tema-btn" id="tema-btn" type="button" aria-pressed="false">
+        <span aria-hidden="true">◐</span><span class="esconde-m"> Tema</span>
+      </button>
+      <a class="btn principal" id="topo-email" href="#contato">Enviar e-mail</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="hero" class="hero">
+    <div class="miolo hero-grade">
+      <div class="hero-texto">
+        <p class="sobre-titulo" id="hero-sobretitulo">Desenvolvimento web · Automação · IA</p>
+        <h1>Sites que vendem. <em>Bots</em> que <i>atendem.</i></h1>
+        <p class="lead" id="hero-frase">Crio sites, sistemas e automações de WhatsApp para agências e para quem tem um projeto próprio. Do primeiro rascunho até o ar, sem complicação.</p>
+        <div class="acoes">
+          <a class="btn principal" href="#contato">Vamos conversar →</a>
+          <a class="btn fantasma" href="#projetos">Ver projetos</a>
+        </div>
+      </div>
+
+      <div class="chat" role="group" aria-label="Demonstração do bot de atendimento (simulada)">
+        <div class="chat-topo">
+          <span class="avatar" aria-hidden="true">🤖</span>
+          <div>Bot de atendimento<small>demonstração simulada · clique nas opções</small></div>
+        </div>
+        <div class="chat-msgs" id="chat-msgs" aria-live="polite"></div>
+        <div class="chat-opcoes" id="chat-opcoes"></div>
+        <p class="chat-nota">Reprodução do fluxo real, sem dados de pessoas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <div class="miolo">
+      <p class="sobre-titulo">Projetos</p>
+      <h2>Trabalho real, no ar.</h2>
+      <p class="sub">Cada projeto mostra o problema, o que foi entregue e com o quê foi feito.</p>
+      <div class="cartoes" id="lista-projetos"></div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="miolo">
+      <p class="sobre-titulo">Serviços</p>
+      <h2>O que eu faço, e para quem.</h2>
+      <div class="duas" id="lista-servicos"></div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="miolo estreito">
+      <p class="sobre-titulo">Sobre</p>
+      <h2>Direto ao ponto.</h2>
+      <p class="sub" id="texto-sobre"></p>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="miolo">
+      <p class="sobre-titulo">Contato</p>
+      <h2>Tem um projeto em mente?</h2>
+      <a class="email" id="email-grande" href="#contato">seu.email@gmail.com</a>
+      <div class="acoes centro">
+        <a class="btn principal" id="email-botao" href="#contato">Enviar e-mail</a>
+        <a class="btn fantasma" id="link-linkedin" href="#contato" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn fantasma" id="link-github" href="#contato" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">© Nelson Félix</footer>
+
+<noscript><p style="padding:16px;text-align:center">Este site precisa de JavaScript para mostrar os projetos. Fale comigo pelo LinkedIn: linkedin.com/in/nelsonfelixneto</p></noscript>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
