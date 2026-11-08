@@ -1,7 +1,7 @@
 import { iniciarTema } from './tema.js';
 import { renderProjetos } from './projetos.js';
 import { iniciarChat } from './chat.js';
-import { htmlServicos, hrefEmail } from './secoes.js';
+import { htmlServicos, hrefEmail, hrefWhatsapp } from './secoes.js';
 import { projetos, perfil, servicos, sobre, contato } from '../dados.js';
 
 const $ = (id) => document.getElementById(id);
@@ -22,3 +22,9 @@ $('link-linkedin').href = contato.linkedin;
 $('link-github').href = contato.github;
 
 iniciarChat({ msgs: $('chat-msgs'), opcoes: $('chat-opcoes') });
+
+const zap = hrefWhatsapp(contato.whatsappBot, 'Oi');
+if (contato.botNoAr && zap) {
+  $('chat-whatsapp').href = zap;
+  $('chat-whatsapp').hidden = false;
+}

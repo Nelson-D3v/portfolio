@@ -200,3 +200,6 @@ h2 { font-weight: 400; margin-bottom: 14px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+.chat-zap { margin: 0 16px 16px; }
+.chat-zap[hidden] { display: none; }

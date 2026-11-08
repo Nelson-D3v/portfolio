@@ -4,16 +4,13 @@ import { MENU, responder, iniciarChat } from '../site/js/chat.js';
 
 const TELEFONE = /\+?\d{2}[\s-]?\(?\d{2}\)?[\s-]?\d{4,5}[\s-]?\d{4}/;
 
-test('o menu tem as 4 opções do fluxo real', () => {
-  assert.deepEqual(MENU.map((m) => m.id), ['foto', 'projetos', 'ia', 'demanda']);
+test('o menu tem as opções do bot real', () => {
+  assert.deepEqual(MENU.map((m) => m.id),
+    ['foto', 'figurinha', 'material', 'projetos', 'quem', 'contato', 'causas', 'ia', 'demanda']);
 });
 
-test('registrar demanda devolve um número de protocolo', () => {
-  assert.match(responder('demanda'), /protocolo/i);
-});
-
-test('a IA admite quando não sabe', () => {
-  assert.match(responder('ia'), /não sei/i);
+test('a opção de IA fala em inteligência artificial', () => {
+  assert.match(responder('ia'), /inteligência artificial/i);
 });
 
 test('opção desconhecida pede para escolher uma opção válida', () => {
@@ -44,5 +41,5 @@ test('iniciarChat mostra a saudação e um botão por opção, e responde ao cli
   opcoes.children[3].listeners.click();
   const textos = msgs.children.map((c) => c.textContent);
   assert.ok(textos.some((t) => t.includes(MENU[3].rotulo)), 'mensagem do visitante');
-  assert.ok(textos.some((t) => /protocolo/i.test(t)), 'resposta do bot');
+  assert.ok(textos.some((t) => t.includes(MENU[3].resposta)), 'resposta do bot');
 });

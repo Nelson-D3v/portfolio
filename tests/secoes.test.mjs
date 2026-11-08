@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { htmlServicos, hrefEmail } from '../site/js/secoes.js';
+import { htmlServicos, hrefEmail, hrefWhatsapp } from '../site/js/secoes.js';
 import { servicos } from '../site/dados.js';
 
 test('renderiza um cartão por serviço, com "Para" e "Resolve"', () => {
@@ -24,4 +24,10 @@ test('hrefEmail monta mailto para um e-mail válido', () => {
 test('hrefEmail com valor inválido cai para a seção de contato', () => {
   assert.equal(hrefEmail(''), '#contato');
   assert.equal(hrefEmail('sem-arroba'), '#contato');
+});
+
+test('hrefWhatsapp monta o link wa.me e rejeita número inválido', () => {
+  assert.equal(hrefWhatsapp('5511946655720', 'Oi'), 'https://wa.me/5511946655720?text=Oi');
+  assert.equal(hrefWhatsapp('(11) 94665-5720'), null);
+  assert.equal(hrefWhatsapp(null), null);
 });
