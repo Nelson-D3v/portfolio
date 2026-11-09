@@ -33,4 +33,15 @@ const zap = hrefWhatsapp(contato.whatsappBot, 'Oi');
 if (contato.botNoAr && zap) {
   $('chat-whatsapp').href = zap;
   $('chat-whatsapp').hidden = false;
+
+  const corpo = document.querySelector('#projeto-bot-gabinete .corpo');
+  if (corpo) {
+    const a = document.createElement('a');
+    a.className = 'btn principal';
+    a.href = zap;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = 'Testar o bot no WhatsApp ↗';
+    corpo.append(a);
+  }
 }
