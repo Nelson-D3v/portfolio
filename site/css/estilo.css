@@ -2,7 +2,6 @@
    TEMAS: troque só estas variáveis para mudar as cores do site.
    ===================================================================== */
 :root {
-  --serif: "Instrument Serif", Georgia, serif;
   --sans: "Geist", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
   --preto: "Archivo Black", "Geist", system-ui, sans-serif;
@@ -39,7 +38,7 @@
   --sombra: 6px 6px 0 #131214;
   --acento: #caef41;
   --sobre-acento: #131214;
-  --destaque: #c24a1b; /* laranja mais escuro: passa no contraste do texto */
+  --destaque: #b8420f; /* laranja mais escuro: passa no contraste do texto */
   --titulo: #131214;
   --raio: 22px;
   --msg-bot: #dbedf9;
@@ -60,7 +59,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 [data-tema="claro"] body {
-  background: linear-gradient(180deg, #3090d7 0, #84c0ee 560px, #dbedf9 980px) no-repeat, #dbedf9;
+  background: linear-gradient(180deg, #a9d4f5 0, #c4e1f7 560px, #dbedf9 980px) no-repeat, #dbedf9;
 }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, p { margin: 0; }
@@ -71,13 +70,16 @@ h1, h2, h3, p { margin: 0; }
 .miolo { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 .estreito { max-width: 780px; }
 section { padding: 96px 0; }
+/* escuro: seções alternam de tom para separar bem os blocos */
+[data-tema="escuro"] #sobre,
+[data-tema="escuro"] #automacoes { background: #0c0c0b; }
+[data-tema="escuro"] #contato { background: linear-gradient(180deg, #131312, #1f2a0a); }
 [data-tema="escuro"] section + section { border-top: 1px solid var(--linha); }
 
 .sobre-titulo { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 18px; color: var(--acento); }
 [data-tema="claro"] .sobre-titulo { color: #fff; background: #131214; display: inline-block; padding: 6px 12px; border-radius: 999px; }
 h2 { font-weight: 400; margin-bottom: 14px; }
-[data-tema="escuro"] h2 { font-family: var(--serif); font-size: clamp(36px, 4.6vw, 60px); line-height: 1.05; }
-[data-tema="claro"] h2 { font-family: var(--preto); font-size: clamp(34px, 5vw, 64px); line-height: .98; letter-spacing: -.04em; }
+h2 { font-family: var(--preto); color: var(--titulo); font-size: clamp(32px, 4.6vw, 56px); line-height: 1; letter-spacing: -.04em; }
 .sub { max-width: 42em; color: var(--suave); margin-bottom: 40px; font-size: 18px; }
 
 /* =====================================================================
@@ -95,8 +97,10 @@ h2 { font-weight: 400; margin-bottom: 14px; }
 [data-tema="escuro"] .topo { border-bottom: 1px solid var(--linha); }
 .topo-grade { display: flex; align-items: center; gap: 20px; min-height: 64px; }
 .marca { font-weight: 600; font-size: 18px; }
-[data-tema="escuro"] .marca { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 26px; }
-[data-tema="claro"] .marca { font-family: var(--preto); letter-spacing: -.02em; font-weight: 400; }
+.marca { display: inline-flex; align-items: center; gap: 10px; font-family: var(--preto); letter-spacing: -.02em; font-weight: 400; }
+.logo { width: 34px; height: 34px; flex: none; }
+.logo-balao { fill: var(--acento); stroke: #131214; stroke-width: 2; stroke-linejoin: round; }
+.logo-nf { fill: none; stroke: #131214; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .selo { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: var(--borda); background: #ffffff0d; }
 [data-tema="claro"] .selo { background: #fff; font-weight: 600; }
 .ponto { width: 8px; height: 8px; border-radius: 50%; background: #3fcf68; }
@@ -114,7 +118,7 @@ h2 { font-weight: 400; margin-bottom: 14px; }
 .hero-grade { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
 .hero h1 { font-family: var(--preto); font-weight: 400; font-size: clamp(46px, 7.4vw, 112px); line-height: .93; letter-spacing: -.045em; color: var(--titulo); margin-bottom: 28px; }
 .hero h1 em { font-style: normal; color: var(--destaque); }
-.hero h1 i { font-family: var(--serif); font-weight: 400; letter-spacing: -.01em; }
+.hero h1 i { font-style: normal; }
 .lead { max-width: 34em; font-size: 19px; color: var(--suave); margin-bottom: 32px; }
 [data-tema="claro"] .lead { font-weight: 500; color: #131214; }
 .acoes { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
@@ -176,10 +180,12 @@ h2 { font-weight: 400; margin-bottom: 14px; }
 .svc b { font-weight: 600; }
 .contato { text-align: center; }
 .contato .sobre-titulo { margin-inline: auto; }
+.contato-sub { margin-inline: auto; }
 .email { display: inline-block; margin: 12px 0 32px; max-width: 100%; overflow-wrap: anywhere; font-family: var(--preto); font-size: clamp(24px, 5.4vw, 72px); line-height: 1.05; letter-spacing: -.04em; }
 .email:hover { color: var(--destaque); }
 [data-tema="claro"] #contato { background: #131214; color: #fff; margin-top: 40px; }
-[data-tema="claro"] #contato .email { color: var(--acento); }
+[data-tema="claro"] #contato .contato-sub { margin-inline: auto; }
+.email { color: var(--acento); }
 [data-tema="claro"] #contato .btn { border-color: var(--acento); box-shadow: 4px 4px 0 var(--acento); }
 [data-tema="claro"] #contato .sobre-titulo { background: var(--acento); color: #131214; }
 [data-tema="claro"] #contato h2 { color: #fff; }
@@ -201,8 +207,6 @@ h2 { font-weight: 400; margin-bottom: 14px; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-.chat-zap { margin: 0 16px 16px; }
-.chat-zap[hidden] { display: none; }
 
 /* habilidades */
 .habs { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 14px; }
@@ -225,3 +229,18 @@ h2 { font-weight: 400; margin-bottom: 14px; }
 
 .sobre-texto { margin-bottom: 32px; }
 .sobre-texto .sub { margin-bottom: 18px; }
+
+/* entrada suave ao rolar a página (só quando o JS ativa a classe .anima) */
+.anima .revela { opacity: 0; transform: translateY(24px); transition: opacity .6s ease-out, transform .6s ease-out; transition-delay: var(--atraso, 0s); }
+.anima .revela.visivel { opacity: 1; transform: none; }
+
+/* escuro: brilhos suaves de cor no fundo das seções, para dar mais vida */
+[data-tema="escuro"] .hero { background: radial-gradient(60% 70% at 85% 10%, #ff5c2e22, transparent 70%), radial-gradient(50% 60% at 5% 90%, #caef4117, transparent 70%); }
+[data-tema="escuro"] #sobre { background: radial-gradient(50% 60% at 100% 0%, #caef4114, transparent 70%), #0c0c0b; }
+[data-tema="escuro"] #projetos { background: radial-gradient(45% 50% at 0% 0%, #ff5c2e18, transparent 70%); }
+[data-tema="escuro"] #automacoes { background: radial-gradient(50% 60% at 0% 100%, #caef4114, transparent 70%), #0c0c0b; }
+[data-tema="escuro"] #servicos { background: radial-gradient(45% 50% at 100% 100%, #ff5c2e18, transparent 70%); }
+
+/* cursor piscando enquanto o texto do topo se escreve */
+.digitando::after { content: "▍"; margin-left: 2px; animation: pisca 1s steps(1) infinite; }
+@keyframes pisca { 50% { opacity: 0; } }

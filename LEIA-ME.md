@@ -26,7 +26,7 @@ Tudo em `site/dados.js`:
 2. **Projetos** (problema, solução, tecnologias, resultado, link) → `projetos`
 3. **Serviços** → `servicos`
 4. **Texto "Sobre"** → `sobre`
-5. **E-mail, LinkedIn e GitHub** → `contato` (e-mail de contato (já é nelsonfelix102005@gmail.com))
+5. **WhatsApp, LinkedIn e GitHub** → `contato`
 
 **Prints dos projetos:** salve em `site/assets/projetos/` com o nome do projeto:
 `libelle.jpg`, `bot-gabinete.jpg`, `forzy.jpg`, `portal-cdr.jpg`, `portal-deputado.jpg`.

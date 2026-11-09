@@ -10,7 +10,8 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/estilo.css">
 <script>
   /* aplica o tema antes de pintar a página, para não piscar */
@@ -29,7 +30,10 @@
 
 <header class="topo">
   <div class="miolo topo-grade">
-    <a class="marca" href="#hero">Nelson Felix</a>
+    <a class="marca" href="#hero" aria-label="Nelson Felix, início">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><path class="logo-balao" d="M6 6h28a2 2 0 0 1 2 2v19a2 2 0 0 1-2 2H18l-8 7v-7H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path class="logo-nf" d="M12 23V12l6 11V12M23 23V12h7M23 17.5h5"/></svg>
+      <span>Nelson Felix</span>
+    </a>
     <span class="selo esconde-m"><span class="ponto" aria-hidden="true"></span>Disponível para projetos</span>
     <nav class="links" aria-label="Seções">
       <a class="esconde-m" href="#sobre">Sobre</a>
@@ -39,7 +43,7 @@
       <button class="tema-btn" id="tema-btn" type="button" aria-pressed="false">
         <span aria-hidden="true">◐</span><span class="esconde-m"> Tema</span>
       </button>
-      <a class="btn principal" id="topo-email" href="#contato">Enviar e-mail</a>
+      <a class="btn principal" id="topo-contato" href="#contato">Fale comigo</a>
     </nav>
   </div>
 </header>
@@ -65,7 +69,6 @@
         <div class="chat-msgs" id="chat-msgs" aria-live="polite"></div>
         <div class="chat-opcoes" id="chat-opcoes"></div>
         <p class="chat-nota">Reprodução do fluxo real, sem dados de pessoas.</p>
-        <a class="btn principal chat-zap" id="chat-whatsapp" href="#" target="_blank" rel="noopener" hidden>Testar o bot no WhatsApp</a>
       </div>
     </div>
   </section>
@@ -109,9 +112,9 @@
     <div class="miolo">
       <p class="sobre-titulo">Contato</p>
       <h2>Tem um projeto em mente?</h2>
-      <a class="email" id="email-grande" href="#contato">seu.email@gmail.com</a>
+      <p class="sub contato-sub">Me chama e conta o que você precisa. Respondo rápido.</p>
       <div class="acoes centro">
-        <a class="btn principal" id="email-botao" href="#contato">Enviar e-mail</a>
+        <a class="btn principal" id="link-whatsapp" href="#contato" target="_blank" rel="noopener">Chamar no WhatsApp</a>
         <a class="btn fantasma" id="link-linkedin" href="#contato" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn fantasma" id="link-github" href="#contato" target="_blank" rel="noopener">GitHub</a>
       </div>

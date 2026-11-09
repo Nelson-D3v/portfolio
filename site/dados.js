@@ -148,10 +148,8 @@ export const habilidades = [
 ];
 
 export const contato = {
-  email: 'nelsonfelix102005@gmail.com',
   linkedin: 'https://www.linkedin.com/in/nelsonfelixneto',
   github: 'https://github.com/Nelson-D3v',
-  // WhatsApp do bot (só dígitos: 55 + DDD + número). O botão só aparece com botNoAr: true.
-  whatsappBot: '5511946655720',
-  botNoAr: true, // mude para false para esconder o botão
+  // WhatsApp para contato de comissões e clientes (só dígitos: 55 + DDD + número).
+  whatsapp: '5511946655720',
 };

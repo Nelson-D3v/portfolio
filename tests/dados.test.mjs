@@ -46,14 +46,10 @@ test('nenhum resultado "ok" fica sem texto', () => {
   }
 });
 
-test('nenhum telefone aparece em nenhum dado', () => {
-  const { whatsappBot, ...contatoSemZap } = dados.contato;
+test('o único telefone publicado é o WhatsApp de contato', () => {
+  const { whatsapp, ...contatoSemZap } = dados.contato;
   assert.doesNotMatch(JSON.stringify({ ...dados, contato: contatoSemZap }), TELEFONE);
-});
-
-test('o único telefone publicado é o do bot, e o botão fica escondido até o bot entrar no ar', () => {
-  assert.equal(dados.contato.whatsappBot, '5511946655720');
-  assert.equal(typeof dados.contato.botNoAr, 'boolean');
+  assert.equal(whatsapp, '5511946655720');
 });
 
 test('há 2 serviços, cada um com para quem e o que resolve', () => {
