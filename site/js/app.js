@@ -1,8 +1,8 @@
 import { iniciarTema } from './tema.js';
 import { renderProjetos } from './projetos.js';
 import { iniciarChat } from './chat.js';
-import { htmlServicos, htmlHabilidades, hrefEmail, hrefWhatsapp } from './secoes.js';
-import { projetos, perfil, servicos, sobre, habilidades, contato } from '../dados.js';
+import { htmlServicos, htmlAutomacoes, htmlHabilidades, hrefEmail, hrefWhatsapp } from './secoes.js';
+import { projetos, perfil, servicos, automacoes, sobre, habilidades, contato } from '../dados.js';
 
 const $ = (id) => document.getElementById(id);
 
@@ -10,6 +10,7 @@ iniciarTema($('tema-btn'));
 $('hero-sobretitulo').textContent = perfil.titulo;
 $('hero-frase').textContent = perfil.frase;
 renderProjetos(projetos, $('lista-projetos'));
+$('lista-automacoes').innerHTML = htmlAutomacoes(automacoes);
 $('lista-servicos').innerHTML = htmlServicos(servicos);
 for (const t of sobre.paragrafos) {
   const p = document.createElement('p');

@@ -12,6 +12,18 @@ export function htmlServicos(lista) {
     .join('');
 }
 
+export function htmlAutomacoes(lista) {
+  return lista
+    .map(
+      (a) => `<article class="svc">
+  <h3>${escapar(a.nome)}</h3>
+  <p><b>O que faz:</b> ${escapar(a.faz)}</p>
+  <p><b>Ganho:</b> ${escapar(a.ganho)}</p>
+</article>`
+    )
+    .join('');
+}
+
 export const NIVEIS = ['Básico', 'Iniciante', 'Intermediário', 'Avançado', 'Especialista'];
 
 export function htmlHabilidades(lista) {

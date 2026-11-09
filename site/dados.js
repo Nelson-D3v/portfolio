@@ -87,11 +87,29 @@ export const projetos = [
       'Uma campanha a deputado estadual sem um lugar único para registrar as pessoas que apoiavam o candidato (academias, embaixadores, influenciadores, vereadores e lideranças) e sem como estimar quantos votos isso representava na eleição de 2026.',
     solucao:
       'Portal de gestão do mandato com cadastro de academias, embaixadores, influenciadores, vereadores e lideranças, controle de emendas, mapa interativo e painel com filtros por região e cidade, exportação para CSV e estimativa de votos calculada a partir dos cadastros. O portal também monitora os cadastros feitos por cada assessor.',
-    tecnologias: ['Supabase', 'WordPress', 'Leaflet'],
+    tecnologias: ['PHP', 'WordPress', 'Supabase', 'Leaflet'],
     resultado: {
       texto: 'Usado para organizar a base de apoio e estimar os votos da eleição de 2026, com acompanhamento do trabalho de cada assessor.',
       status: 'ok',
     },
+  },
+];
+
+export const automacoes = [
+  {
+    nome: 'Excel que alimenta outro site',
+    faz: 'Um sistema escreve os dados direto numa planilha do Excel, e outro site consulta essa planilha quando precisa.',
+    ganho: 'Os dados passam de um lugar para o outro sem ninguém copiar à mão.',
+  },
+  {
+    nome: 'APIs entre sistemas',
+    faz: 'Crio APIs para um site conversar com outro e trocar informações sozinhos.',
+    ganho: 'Sistemas separados funcionam como um só, sem retrabalho.',
+  },
+  {
+    nome: 'Atendimento no WhatsApp',
+    faz: 'Bot com menu e conversa por IA que responde as mensagens que chegam.',
+    ganho: 'A equipe deixa de responder tudo à mão. Veja o bot do gabinete nos projetos.',
   },
 ];
 
@@ -122,9 +140,11 @@ export const habilidades = [
   { nome: 'JavaScript', nivel: 4 },
   { nome: 'Node.js', nivel: 4 },
   { nome: 'HTML e CSS', nivel: 4 },
+  { nome: 'PHP', nivel: 4 },
   { nome: 'Python', nivel: 3 },
   { nome: 'TypeScript', nivel: 3 },
   { nome: 'SQL e Supabase', nivel: 3 },
+  { nome: 'APIs e integrações', nivel: 4 },
 ];
 
 export const contato = {
