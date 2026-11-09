@@ -8,7 +8,7 @@
 // =====================================================================
 
 export const perfil = {
-  nome: 'Nelson Félix',
+  nome: 'Nelson Felix',
   titulo: 'Desenvolvimento web · Automação · IA',
   frase:
     'Crio sites, sistemas e automações de WhatsApp para agências e para quem tem um projeto próprio. Do primeiro rascunho até o ar, sem complicação.',

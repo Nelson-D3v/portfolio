@@ -1,4 +1,4 @@
-# Portfólio · Nelson Félix
+# Portfólio · Nelson Felix
 
 Site de uma página só, feito com HTML, CSS e JavaScript simples (sem instalar nada, sem build).
 **Por que assim?** É a opção mais simples: abre rápido, a Vercel publica direto e qualquer pessoa consegue editar um texto.
