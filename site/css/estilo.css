@@ -203,3 +203,25 @@ h2 { font-weight: 400; margin-bottom: 14px; }
 
 .chat-zap { margin: 0 16px 16px; }
 .chat-zap[hidden] { display: none; }
+
+/* habilidades */
+.habs { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 14px; }
+.hab { display: grid; grid-template-columns: minmax(110px, 1fr) auto minmax(100px, 1fr); align-items: center; gap: 14px; }
+.hab-nome { font-weight: 600; }
+.hab-barra { display: inline-flex; gap: 6px; }
+.hab-barra i { width: 20px; height: 20px; border-radius: 5px; border: var(--btn-borda); background: transparent; }
+.hab-barra.n1 i.cheio { background: #ff5c2e; }
+.hab-barra.n2 i.cheio { background: #f5a524; }
+.hab-barra.n3 i.cheio { background: #f0d93a; }
+.hab-barra.n4 i.cheio { background: #9bd33f; }
+.hab-barra.n5 i.cheio { background: #2fbf71; }
+.hab-barra i.cheio { border-color: transparent; }
+[data-tema="claro"] .hab-barra i.cheio { border-color: #131214; }
+.hab-nivel { color: var(--suave); font-size: 15px; }
+@media (max-width: 560px) {
+  .hab { grid-template-columns: 1fr auto; }
+  .hab-nivel { grid-column: 1 / -1; margin-top: -8px; }
+}
+
+.sobre-texto { margin-bottom: 32px; }
+.sobre-texto .sub { margin-bottom: 18px; }

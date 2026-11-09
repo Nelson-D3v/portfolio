@@ -12,6 +12,23 @@ export function htmlServicos(lista) {
     .join('');
 }
 
+export const NIVEIS = ['Básico', 'Iniciante', 'Intermediário', 'Avançado', 'Especialista'];
+
+export function htmlHabilidades(lista) {
+  return lista
+    .map((h) => {
+      const n = Math.min(5, Math.max(1, Math.round(Number(h.nivel)) || 1));
+      return `<li class="hab">
+  <span class="hab-nome">${escapar(h.nome)}</span>
+  <span class="hab-barra n${n}" role="img" aria-label="${NIVEIS[n - 1]}">${[1, 2, 3, 4, 5]
+        .map((i) => `<i class="${i <= n ? 'cheio' : ''}"></i>`)
+        .join('')}</span>
+  <span class="hab-nivel">${NIVEIS[n - 1]}</span>
+</li>`;
+    })
+    .join('');
+}
+
 /** mailto: para um e-mail com cara de válido; senão leva o visitante à seção de contato. */
 export function hrefEmail(email) {
   const e = String(email ?? '').trim();

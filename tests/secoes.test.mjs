@@ -31,3 +31,12 @@ test('hrefWhatsapp monta o link wa.me e rejeita número inválido', () => {
   assert.equal(hrefWhatsapp('(11) 94665-5720'), null);
   assert.equal(hrefWhatsapp(null), null);
 });
+
+test('htmlHabilidades mostra nome, barras e rótulo do nível, limitando entre 1 e 5', async () => {
+  const { htmlHabilidades } = await import('../site/js/secoes.js');
+  const html = htmlHabilidades([{ nome: 'A<b>', nivel: 4 }, { nome: 'B', nivel: 99 }]);
+  assert.match(html, /A&lt;b&gt;/);
+  assert.match(html, /Avançado/);
+  assert.match(html, /Especialista/);
+  assert.equal((html.match(/class="cheio"/g) ?? []).length, 9);
+});

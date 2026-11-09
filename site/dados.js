@@ -110,9 +110,22 @@ export const servicos = [
 ];
 
 export const sobre = {
-  texto:
-    'Sou o Nelson, desenvolvedor e estudante de Inteligência Artificial na FIAP. Resolvo problemas reais com código que funciona: coloquei no ar uma loja que fecha pedidos sozinha, um bot de WhatsApp para um gabinete e um sistema de manutenção preditiva que ficou em 3º lugar no NEXT.',
+  paragrafos: [
+    'Sou o Nelson, tenho 20 anos, sou desenvolvedor e estudo Inteligência Artificial na FIAP. Resolvo problemas reais com código que funciona: coloquei no ar uma loja que fecha pedidos sozinha, um bot de WhatsApp para um gabinete e um sistema de manutenção preditiva que ficou em 3º lugar no NEXT.',
+    'Depois de trabalhar com agências, escolhi atender direto: você fala com a pessoa que faz o trabalho. Isso traz decisões rápidas, comunicação sem intermediários e um resultado mais coerente do começo ao fim.',
+    'Se você quer um site rápido, claro e estável, com design atual e abordagem profissional, vamos nos encaixar. Se procura algo barato, sem estratégia e feito em cima de um template, eu não sou a opção.',
+  ],
 };
+
+// nivel de 1 a 5: 1 = básico, 2 = iniciante, 3 = intermediário, 4 = avançado, 5 = especialista
+export const habilidades = [
+  { nome: 'JavaScript', nivel: 4 },
+  { nome: 'Node.js', nivel: 4 },
+  { nome: 'HTML e CSS', nivel: 4 },
+  { nome: 'Python', nivel: 3 },
+  { nome: 'TypeScript', nivel: 3 },
+  { nome: 'SQL e Supabase', nivel: 3 },
+];
 
 export const contato = {
   email: 'nelsonfelix102005@gmail.com',
