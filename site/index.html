@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" data-tema="escuro">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,17 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/estilo.css">
-<script>
-  /* aplica o tema antes de pintar a página, para não piscar */
-  (function () {
-    var t = null;
-    try { t = localStorage.getItem('tema'); } catch (e) {}
-    if (t !== 'claro' && t !== 'escuro') {
-      t = matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
-    }
-    document.documentElement.dataset.tema = t;
-  })();
-</script>
 </head>
 <body>
 <a class="pular" href="#projetos">Pular para os projetos</a>
@@ -40,9 +29,6 @@
       <a class="esconde-m" href="#projetos">Projetos</a>
       <a class="esconde-m" href="#automacoes">Automações</a>
       <a class="esconde-m" href="#servicos">Serviços</a>
-      <button class="tema-btn" id="tema-btn" type="button" aria-pressed="false">
-        <span aria-hidden="true">◐</span><span class="esconde-m"> Tema</span>
-      </button>
       <a class="btn principal" id="topo-contato" href="#contato">Fale comigo</a>
     </nav>
   </div>

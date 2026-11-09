@@ -1,4 +1,3 @@
-import { iniciarTema } from './tema.js';
 import { renderProjetos } from './projetos.js';
 import { iniciarChat } from './chat.js';
 import { htmlServicos, htmlAutomacoes, htmlHabilidades, hrefWhatsapp } from './secoes.js';
@@ -6,7 +5,6 @@ import { projetos, perfil, servicos, automacoes, sobre, habilidades, contato } f
 
 const $ = (id) => document.getElementById(id);
 
-iniciarTema($('tema-btn'));
 $('hero-sobretitulo').textContent = perfil.titulo;
 $('hero-frase').textContent = perfil.frase;
 renderProjetos(projetos, $('lista-projetos'));

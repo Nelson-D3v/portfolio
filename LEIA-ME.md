@@ -11,7 +11,7 @@ Portfolio/
 │  ├─ index.html          ← estrutura da página
 │  ├─ dados.js            ← ★ seus textos, projetos e contatos (edite aqui)
 │  ├─ css/estilo.css      ← cores, fontes e layout
-│  ├─ js/                 ← comportamento (tema claro/escuro, chat, projetos)
+│  ├─ js/                 ← comportamento (chat, projetos)
 │  └─ assets/projetos/    ← ★ prints dos projetos
 ├─ tests/                 ← testes automáticos (não vão para o ar)
 ├─ ligar-site.bat         ← abre o site no seu computador
