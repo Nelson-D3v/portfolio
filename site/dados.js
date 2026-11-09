@@ -133,5 +133,5 @@ export const contato = {
   github: 'https://github.com/Nelson-D3v',
   // WhatsApp do bot (só dígitos: 55 + DDD + número). O botão só aparece com botNoAr: true.
   whatsappBot: '5511946655720',
-  botNoAr: false, // mude para true quando o bot estiver rodando na VPS
+  botNoAr: true, // mude para false para esconder o botão
 };
