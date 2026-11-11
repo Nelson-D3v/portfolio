@@ -32,6 +32,13 @@ test('projeto sem link não mostra botão de link', () => {
   assert.doesNotMatch(h, /<a /);
 });
 
+test('projeto com whatsapp mostra o botão "Testar o bot"; número inválido não', () => {
+  const h = htmlProjeto({ ...base, link: null, whatsapp: '5511946655720' });
+  assert.match(h, /href="https:\/\/wa\.me\/5511946655720"/);
+  assert.match(h, /Testar o bot/);
+  assert.doesNotMatch(htmlProjeto({ ...base, link: null, whatsapp: '123' }), /<a /);
+});
+
 test('o espaço de imagem mostra o caminho do arquivo', () => {
   assert.match(htmlProjeto(base), /assets\/projetos\/libelle\.jpg/);
 });

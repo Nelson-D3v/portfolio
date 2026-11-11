@@ -36,6 +36,8 @@ export const projetos = [
     id: 'bot-gabinete',
     nome: 'Bot de WhatsApp do gabinete',
     link: null,
+    // Número do bot no ar (só dígitos: 55 + DDD + número). Gera o botão "Testar o bot".
+    whatsapp: '5511946655720',
     nota: null,
     imagem: 'assets/projetos/bot-gabinete.png',
     problema: 'Um gabinete recebendo mensagens de cidadãos pelo WhatsApp, todas respondidas à mão.',
@@ -151,5 +153,5 @@ export const contato = {
   linkedin: 'https://www.linkedin.com/in/nelsonfelixneto',
   github: 'https://github.com/Nelson-D3v',
   // WhatsApp para contato de comissões e clientes (só dígitos: 55 + DDD + número).
-  whatsapp: '5511946655720',
+  whatsapp: '5511965350001',
 };

@@ -25,6 +25,10 @@ export function htmlProjeto(p) {
   const botao = p.link
     ? `<a class="btn principal" href="${escapar(p.link)}" target="_blank" rel="noopener">Ver no ar ↗</a>`
     : '';
+  // Botão para conversar com o bot do projeto (só dígitos: 55 + DDD + número). Número inválido não gera botão.
+  const zapBot = /^55[0-9]{10,11}$/.test(p.whatsapp ?? '')
+    ? `<a class="btn principal" href="https://wa.me/${p.whatsapp}" target="_blank" rel="noopener">Testar o bot ↗</a>`
+    : '';
 
   return `<article class="cartao" id="projeto-${escapar(p.id)}">
   <div class="foto">
@@ -40,7 +44,7 @@ export function htmlProjeto(p) {
       <div><dt>Resultado</dt>${htmlResultado(p.resultado)}</div>
     </dl>
     <ul class="tags">${tags}</ul>
-    ${botao}
+    ${botao}${zapBot}
   </div>
 </article>`;
 }
